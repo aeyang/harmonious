@@ -1,1 +1,12 @@
-Hello {title}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Harmonious</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/app.css" />
+</head>
+<body>
+  <p class="start">
+    Hello {title}
+  </p>
+</body>
+</html>
