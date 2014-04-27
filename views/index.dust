@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Harmonious</title>
   <link rel="stylesheet" type="text/css" href="stylesheets/app.css" />
@@ -7,6 +7,9 @@
 <body>
   <p class="start">
     Hello {title}
+  </p>
+  <p class="start-2">
+    Testing supervisor
   </p>
 </body>
 </html>

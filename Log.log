@@ -1,0 +1,28 @@
+4/26/14
+--------
+- Added grunt to this project.
+- Compass is a rubygem. So you need ruby and rubygems to use it. But:
+You don't have to be working on a Ruby project to benefit from using Compass and SASS. Also you don't need to install anything on your web server. You just need Ruby and RubyGems installed on your development machine to generate the CSS files.
+Also using 960.gs for columns. Im using the compass plugin version of 960. It is also a rubygem.
+
+- I've spent a lot of time trying to get SASS and 960.gs. I think Ive finally got it so here is the whole process:
+
+1] Started off with using node-sass
+app.use(sass.middleware({
+  src: __dirname + '/public/sass',
+  dest: __dirname + '/public',
+  debug: true,
+  outputStyle: 'compressed'
+}));
+
+
+2.] next tried node-compass.
+app.use(compass({
+  node-compass assumes your static assets are under public/
+  This will look for sass files in public/sass/stylesheets
+  sass: 'sass/stylesheets',
+  logging: 'true',
+  config: 'config.rb'
+}));
+
+3.] Finally, I installed grunt, and some npm grunt plugins, particularly the compass one.
