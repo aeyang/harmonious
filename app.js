@@ -8,7 +8,6 @@ var express = require('express'),
   user = require('./routes/user'),
   http = require('http'),
   path = require('path'),
-  sass = require('node-sass'),
   consolidate = require('consolidate'),
   dust = require('dustjs-linkedin'),
   template_engine = 'dust';
@@ -23,12 +22,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.engine('dust', consolidate.dust);
 app.set('view engine', template_engine);    //
 app.set('template_engine', template_engine);//Whats the difference between these two?
-app.use(sass.middleware({
-  src: __dirname + '/public/sass',
-  dest: __dirname + '/public',
-  debug: true,
-  outputStyle: 'compressed'
-}));
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.json());
